@@ -7,10 +7,11 @@ namespace MusicDeck.Models
 {
     public class Music
     {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string album { get; set; }
-        public string author { get; set; }
-        public double note { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string Author { get; set; }
+        public string Album { get; set; }
+        public DateTime ReleaseDate { get; set; }
+        public int Note { get; set; }
     }
 }
