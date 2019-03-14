@@ -21,9 +21,17 @@ namespace MusicDeck.Controllers
 
         // GET: Musics
         [Authorize]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string searchString)
         {
-            return View(await _context.Music.ToListAsync());
+            var musics = from m in _context.Music
+                         select m;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                musics = musics.Where(s => s.Name.Contains(searchString));
+            }
+
+            return View(await musics.ToListAsync());
         }
 
         // GET: Musics/Details/5
