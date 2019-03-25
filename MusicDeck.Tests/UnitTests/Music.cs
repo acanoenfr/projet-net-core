@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-using MusicDeck.Models;
 
 namespace MusicDeck.Tests.UnitTests
 {
@@ -10,6 +9,21 @@ namespace MusicDeck.Tests.UnitTests
     {
         [Test]
         public void GetOneMusic()
+        {
+        }
+
+        [Test]
+        public void GetAllMusics()
+        {
+        }
+
+        [Test]
+        public void SortMusicsByName()
+        {
+        }
+
+        [Test]
+        public void GetMusicNote()
         {
         }
     }

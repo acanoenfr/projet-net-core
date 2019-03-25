@@ -19,9 +19,8 @@ namespace MusicDeck.Models
         [Required]
         public string Author { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z""'\s-]*$")]
+        [StringLength(60, MinimumLength = 3)]
         [Required]
-        [StringLength(30)]
         public string Album { get; set; }
 
         [Display(Name = "Release Date")]
@@ -29,7 +28,6 @@ namespace MusicDeck.Models
         public DateTime ReleaseDate { get; set; }
 
         [Range(1, 5)]
-        [DataType(DataType.Currency)]
         [Column(TypeName = "decimal(18, 2)")]
         public int Note { get; set; }
     }

@@ -25,20 +25,13 @@ namespace MusicDeck.Migrations
                         .ValueGeneratedOnAdd()
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<string>("Album")
-                        .IsRequired()
-                        .HasMaxLength(30);
+                    b.Property<string>("Album");
 
-                    b.Property<string>("Author")
-                        .IsRequired()
-                        .HasMaxLength(60);
+                    b.Property<string>("Author");
 
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(60);
+                    b.Property<string>("Name");
 
-                    b.Property<decimal>("Note")
-                        .HasColumnType("decimal(18, 2)");
+                    b.Property<int>("Note");
 
                     b.Property<DateTime>("ReleaseDate");
 

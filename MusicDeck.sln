@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.271
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDeck", "MusicDeck\MusicDeck.csproj", "{150B37BC-77ED-4D9F-AB1D-C390CE72AC03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicDeck", "MusicDeck\MusicDeck.csproj", "{150B37BC-77ED-4D9F-AB1D-C390CE72AC03}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C9A60388-E13B-435A-BE52-58843D30295E}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MusicDeck.Tests", "MusicDeck.Tests\MusicDeck.Tests.csproj", "{2BCE91E0-AFC2-4322-8277-A27CDEFD2648}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MusicDeck.Tests", "MusicDeck.Tests\MusicDeck.Tests.csproj", "{2BCE91E0-AFC2-4322-8277-A27CDEFD2648}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
