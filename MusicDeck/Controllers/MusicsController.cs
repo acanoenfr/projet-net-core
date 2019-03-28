@@ -21,8 +21,12 @@ namespace MusicDeck.Controllers
 
         // GET: Musics
         [Authorize]
-        public async Task<IActionResult> Index(string searchString)
+        public async Task<IActionResult> Index(string musicAuthor, string searchString)
         {
+            IQueryable<string> authorQuery = from m in _context.Music
+                                             orderby m.Author
+                                             select m.Author;
+
             var musics = from m in _context.Music
                          select m;
 
@@ -31,7 +35,18 @@ namespace MusicDeck.Controllers
                 musics = musics.Where(s => s.Name.Contains(searchString));
             }
 
-            return View(await musics.ToListAsync());
+            if (!String.IsNullOrEmpty(musicAuthor))
+            {
+                musics = musics.Where(x => x.Author == musicAuthor);
+            }
+
+            var musicAuthorVM = new MusicAuthorViewModel
+            {
+                Authors = new SelectList(await authorQuery.Distinct().ToListAsync()),
+                Musics = await musics.ToListAsync()
+            };
+
+            return View(musicAuthorVM);
         }
 
         // GET: Musics/Details/5

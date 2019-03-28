@@ -13,5 +13,12 @@ namespace MusicDeck.Tests.UnitTests
             var result = "Hello World";
             Assert.AreEqual("Hello World", result);
         }
+
+        [Test]
+        public void WhiteColourHorse()
+        {
+            var expected = "white";
+            Assert.AreEqual("white", expected);
+        }
     }
 }
